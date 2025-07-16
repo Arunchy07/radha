@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radha Krishna Pharmacy</title>
+    <link rel="icon" type="image" href="/images/icon.png" />
+    <link rel="stylesheet" href="Shop.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</head>
+
+  <!-------------BOOTSTRAP-->
+  <script src="https://kit.fontawesome.com/c0adbb8084.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light  shadow-sm px-4 py-2 sticky-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="/images/icon.png" alt="Logo" width="40" height="40" class="me-2">
+      <strong>Radha Krishna Pharmacy</strong>
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="Shop.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Icons -->
+      <div class="d-flex align-items-center ms-3">
+        <!-- User Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" class="me-3 text-dark" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+
+        <!-- Cart Button -->
+        <button type="button" class="btn btn-outline-primary position-relative" id="cartBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24">
+            <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
+          </svg>
+          <span id="itemCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+            <span class="visually-hidden">Cart items</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container" id="productDom">
+
+</div>
+  
+
+<!-- Cart -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+          <div>
+            <div class="text-center my-2">
+              <h3>Your Cart</h3>
+            </div>
+            <div id=" text-center">
+              <table class="table">
+                <tbody id="cart-contant">
+
+                </tbody>
+              </table>
+              <div class="text-center">
+                <h4>Total: ₹ <span id="total">0</span> </h4>
+                <br>
+                <button class="btn btn-danger" id="clearCart">Clear Cart</button>
+                <button class="chectout-btn" id="checkout">Check Out</button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-----------Scripts---->
+<script src="./Shop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

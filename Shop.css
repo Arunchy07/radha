@@ -1,0 +1,102 @@
+ml{
+    font-family: 'Urbanist',sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    color: var(--text-color);
+}
+
+
+/*----------NAVBAR---------*/
+
+.navicon img{
+  height: 100px;
+  position: relative;
+  margin-left: 15px;
+}
+
+.navbar{
+  background-color: rgb(197, 211, 219);
+  position: fixed;
+  display: grid;
+}
+.nav-links{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  color: lch(3.34% 0.46 290.19) !important;
+}
+.nav-links:hover{
+  color: hsl(251, 29%, 11%) !important;
+}
+.nav-items{
+  margin-right: 100px;
+  padding: 5px;
+}
+.nav-icon{
+  margin-right: 15px;
+}
+
+/*------------------*/
+#cartBtn{
+  background-color: rgb(197, 211, 219);
+  align-items: center;
+  border: none;
+  padding: 0px;
+}
+
+#productDom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 110px;
+}
+.d-flex{
+    justify-content: space-between;
+}
+.cart-image{
+    width: 45px;
+}
+.delete{
+    color: rgb(201, 34, 34);
+    font-size: 20px;
+}
+.delete:hover{
+    color: red;
+}
+.nav-style{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.inputField{
+    width: 25px;
+    text-align: center;
+    border: none;
+}
+.btn{
+  padding: 4px;
+}
+.card-img-top{
+  width: 80px;
+  height: 90px;
+}
+.chectout-btn{
+  background-color: hwb(144 0% 0% / 0.729);
+  border-radius: 5px;
+  width: 90px;
+  height: 37px;
+  outline: none;
+  border: none;
+  color: aliceblue;
+  margin-left: 100px;
+}
+
